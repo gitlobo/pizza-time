@@ -1,9 +1,36 @@
 function calcularPrecioPizza(nPepperonis, nBasils, nMushrooms, hasSauce, hasCheese) {
-  return 0;
+    let precio = 5
+    precio = precio + nPepperonis * 0.5 + nBasils * 0.3 + nMushrooms * 0.1
+    if (hasSauce) {
+        precio = precio + 1
+    }
+    if (hasCheese) {
+        precio = precio + 1.5
+    }
+  return precio;
 }
 
 function imprimirBoleta(nPepperonis, nBasils, nMushrooms, hasSauce, hasCheese) {
-  return "Boleta";
+    if (nPepperonis != 0) {
+        const pepperoni = nPepperonis;
+    }
+    if (nBasils != 0) {
+        const albahaca = nBasils;
+    }
+    if (nMushrooms != 0) {
+        const champiñones = nMushrooms;
+    }
+    if (hasSauce != false) {
+        const salsa = hasSauce;
+    }
+    if (hasCheese != false) {
+        const queso = hasCheese;
+    }
+    const price = calcularPrecioPizza(nPepperonis, nBasils, nMushrooms, hasSauce, hasCheese);
+
+    const resumen = 'El resumen de la compra <br> Ingredientes: <br>  <br> Pepperoni: ${pepperoni} <br> <br> Albahaca: ${albahaca} <br> <br> Champiñones: ${champiñones} <br> <br> Salsa: ${salsa} <br> <br> Queso: ${queso} <br> <br> Precio: $(precio) <br>';
+
+  return resumen;
 }
 
 /*
