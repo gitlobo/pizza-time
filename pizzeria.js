@@ -11,26 +11,33 @@ function calcularPrecioPizza(nPepperonis, nBasils, nMushrooms, hasSauce, hasChee
 }
 
 function imprimirBoleta(nPepperonis, nBasils, nMushrooms, hasSauce, hasCheese) {
+    let pepperoni = 0;
+    let albahaca = 0;
+    let champiñones = 0;
+    let salsa = false;
+    let queso = false;
+
     if (nPepperonis != 0) {
-        const pepperoni = nPepperonis;
+        pepperoni = nPepperonis;
     }
     if (nBasils != 0) {
-        const albahaca = nBasils;
+        albahaca = nBasils;
     }
     if (nMushrooms != 0) {
-        const champiñones = nMushrooms;
+        champiñones = nMushrooms;
     }
     if (hasSauce != false) {
-        const salsa = hasSauce;
+        salsa = hasSauce;
     }
     if (hasCheese != false) {
-        const queso = hasCheese;
+        queso = hasCheese;
     }
+
     const price = calcularPrecioPizza(nPepperonis, nBasils, nMushrooms, hasSauce, hasCheese);
 
-    const resumen = 'El resumen de la compra <br> Ingredientes: <br>  <br> Pepperoni: ${pepperoni} <br> <br> Albahaca: ${albahaca} <br> <br> Champiñones: ${champiñones} <br> <br> Salsa: ${salsa} <br> <br> Queso: ${queso} <br> <br> Precio: $(precio) <br>';
+    const resumen = `El resumen de la compra <br> Ingredientes: <br> <br> Pepperoni: ${pepperoni} <br> <br> Albahaca: ${albahaca} <br> <br> Champiñones: ${champiñones} <br> <br> Salsa: ${salsa} <br> <br> Queso: ${queso} <br> <br> Precio: ${price} <br>`;
 
-  return resumen;
+    return resumen;
 }
 
 /*
